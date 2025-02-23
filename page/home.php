@@ -1,0 +1,9 @@
+<?php include __DIR__ . "/../components/home/hero.php"; ?>
+<?php include __DIR__ . "/../components/home/featursSection.php"; ?>
+<?php include __DIR__ . "/../components/home/fruitsShop.php"; ?>
+<?php include __DIR__ . "/../components/home/featurs.php"; ?>
+<?php include __DIR__ . "/../components/home/vesitableShop.php"; ?>
+<?php include __DIR__ . "/../components/home/bannerSection.php"; ?>
+<?php include __DIR__ . "/../components/home/bestsalerProdut.php"; ?>
+<?php include __DIR__ . "/../components/home/fact.php"; ?>
+<?php include __DIR__ . "/../components/home/tastimonial.php"; ?>

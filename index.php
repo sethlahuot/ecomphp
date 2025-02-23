@@ -1,21 +1,40 @@
+<?php 
+$page = "page/home.php";
+if(isset($_GET['p']))
+{
+    $p = $_GET['p'];
+    switch($p)
+    {
+        case "shop" : $page = "page/shop.php";
+            break;
+        case "contact" : $page = "page/contact.php";
+            break;
+        case "cart" : $page = "page/cart.php";
+            break;
+        case "chackout" : $page = "page/chackout.php";
+            break;
+        case "shop-detail" : $page = "page/shop-detail.php";
+            break;
+        case "testimonial" : $page = "page/testimonial.php";
+            break;
+    }
+}
+include($page);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <?php include "includes/head.php" ?>
+       
     </head>
     <body>
         <?php include "includes/spinner.php" ?>
         <?php include "includes/navber.php" ?>
         <?php include "includes/modalSearch.php" ?>
-        <?php include "page/home/hero.php" ?>
-        <?php include "page/home/featursSection.php" ?>
-        <?php include "page/home/fruitsShop.php" ?>
-        <?php include "page/home/featurs.php" ?>
-        <?php include "page/home/vesitableShop.php" ?>
-        <?php include "page/home/bannerSection.php" ?>
-        <?php include "page/home/bestsalerProdut.php" ?>
-        <?php include "page/home/fact.php" ?>
-        <?php include "page/home/tastimonial.php" ?>
+
+        <?php include $page ?>
+        
         <?php include "includes/footer.php" ?>
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
