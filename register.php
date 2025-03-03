@@ -51,24 +51,33 @@
             <div class="toggle-panel toggle-left">
                 <h1>Hello, Welcome!</h1>
                 <p>Don't have an account?</p>
+                <?php if(isset($_SESSION['message'])): ?>
+                    <div class="alert">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                        <strong style="color: red;">Warning!</strong> <?= htmlspecialchars($_SESSION['message']); ?>
+                    </div>
+                    <?php unset($_SESSION['message']); 
+                    endif; 
+                ?>
                 <button class="btn register-btn">Register</button>
             </div>
             <div class="toggle-panel toggle-right">
                 <h1>Welcome Back!</h1>
                 <p>Already have an account?</p>
+                <?php if(isset($_SESSION['message'])): ?>
+                    <div class="alert">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                        <strong style="color: red;">Warning!</strong> <?= htmlspecialchars($_SESSION['message']); ?>
+                    </div>
+                    <?php unset($_SESSION['message']); 
+                    endif; 
+                ?>
                 <button class="btn login-btn">Login</button>
             </div>
         </div>
     </div>
     <!-- Alert Message -->
-    <?php if(isset($_SESSION['message'])): ?>
-        <div class="alert">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-            <strong style="color: red;">Warning!</strong> <?= htmlspecialchars($_SESSION['message']); ?>
-        </div>
-        <?php unset($_SESSION['message']); 
-        endif; 
-    ?>
+    
     <!-- JavaScript for Form Toggle -->
     <script>
         const container = document.querySelector('.container');

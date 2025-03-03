@@ -22,12 +22,27 @@
     </div>
 </footer>
     </main>
-    
-
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/smooth-scrollbar.min.js"></script>
-    
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/smooth-scrollbar.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Alertify JS -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
+    <script>
+        <?php 
+            if(isset($_SESSION['message']))
+            { 
+                ?>
+                alertify.set('notifier','position', 'top-center');
+                alertify.success('<?=$_SESSION['message']; ?>');
+            <?php
+                unset($_SESSION['message']);
+            }
+        ?>
+    </script>
 
     </body>
 </html>
+<?php ob_end_flush(); ?>

@@ -1,5 +1,6 @@
 <?php
 include "../connect.php"; 
+include "myfunctions.php";
 session_start(); 
 if (isset($_POST['register_btn'])) 
 {
@@ -48,19 +49,28 @@ else if (isset($_POST['login_btn'])) {
         if ($stmt->rowCount() > 0) {
             $_SESSION['auth'] = true;
             $userdata = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $userId = $userdata['id'];
             $username = $userdata['name'];
             $useremail = $userdata['email']; 
+            $role_as = $userdata['role_as']; 
             $_SESSION['auth_user'] = [
+                'user_id' => $userId,
                 'name' => $username,
                 'email' => $useremail
             ];
-            $_SESSION['message'] = "Logged In Successfully";
-            header('Location: ../../index.php');
-            exit();
+            $_SESSION['role_as'] = $role_as;
+
+            if($role_as == 1)
+            {
+                redirect("../../admin/index.php","Welcome To Dashboard");
+            }
+            else
+            {
+                redirect("../../index.php","Logged In Successfully");
+            }
         } else {
-            $_SESSION['message'] = "Invalid Credentials";
-            header('Location: ../../register.php');
-            exit();
+            redirect("../../register.php","Email or Password is incorrced");
         }
     } catch (PDOException $e) {
         echo "Error at login: " . $e->getMessage();
