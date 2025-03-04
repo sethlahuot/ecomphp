@@ -41,7 +41,6 @@
                         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                         )";
                     $pdo->query($sqlProduct);
-
         $sqlUser = "create table if not exists user(
                     id integer auto_increment primary key,
                     name varchar(100),
