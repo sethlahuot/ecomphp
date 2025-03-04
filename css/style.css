@@ -209,8 +209,8 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.2; /* Set the opacity of the background image */
-    z-index: -1; /* Make sure the image stays behind the content */
+    opacity: 0.2; 
+    z-index: -1; 
 }
 
 
@@ -251,7 +251,7 @@
 
 .page-header {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/cart-page-header-img.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/kbal1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -449,6 +449,7 @@
 
 
 /*** testimonial Start ***/
+
 .testimonial .owl-nav .owl-prev {
     position: absolute;
     top: -58px;
@@ -479,8 +480,8 @@
 .testimonial .owl-nav .owl-next:hover {
     background: var(--bs-secondary);
     color: var(--bs-white);
-}
-/*** testimonial End ***/
+} */
+/*** testimonial End **
 
 
 /*** Single Page Start ***/
@@ -620,3 +621,5 @@
 .site-btn:hover {
     background: #e04b4f;
 }
+
+
