@@ -15,7 +15,7 @@
         <?php include "components/home/bannerSection.php"; ?>
 
         <?php include "components/home/fact.php"; ?>
-        <?php include "components/home/tastimonial.php"; ?>
+        
         
         <?php include "includes/footer.php" ?>
         

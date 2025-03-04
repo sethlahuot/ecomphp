@@ -9,7 +9,7 @@ $category_data = getSlugActive("category", $category_slug);
 if (!$category_data) {
     die("Error: No category found for slug '$category_slug'. Check the database.");
 }
-var_dump($category_data); 
+
 $cid = $category_data['id']; 
 ?>
 <!-- Single Page Header start -->
@@ -112,18 +112,7 @@ $cid = $category_data['id'];
                                     </div>
                                 </div>
                             <?php } ?>
-                            <div class="col-12">
-                                <div class="pagination d-flex justify-content-center mt-5">
-                                    <a href="#" class="rounded">&laquo;</a>
-                                    <a href="#" class="active rounded">1</a>
-                                    <a href="#" class="rounded">2</a>
-                                    <a href="#" class="rounded">3</a>
-                                    <a href="#" class="rounded">4</a>
-                                    <a href="#" class="rounded">5</a>
-                                    <a href="#" class="rounded">6</a>
-                                    <a href="#" class="rounded">&raquo;</a>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                         </div>

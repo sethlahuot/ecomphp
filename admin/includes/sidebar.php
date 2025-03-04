@@ -37,6 +37,7 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1) 
             <span class="nav-link-text ms-1">Add Category</span>
           </a>
         </li>
+        
         <li class="nav-item">
           <a class="nav-link text-white <?= $page =="products.php"? 'active bg-gradient-primary': ''; ?>" href="products.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -53,11 +54,20 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1) 
             <span class="nav-link-text ms-1">Add Products</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-white <?= $page =="orders.php"? 'active bg-gradient-primary': ''; ?>" href="orders.php">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">table_view</i>
+            </div>
+            <span class="nav-link-text ms-1">Orders</span>
+          </a>
+        </li>
       </ul>
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">
       <div class="mx-3">
         <a class="btn bg-gradient-primary mt-4 w-100" href="../logout.php" type="button">Logout</a>
+        <a href="../index.php" class="btn bg-gradient-primary mt-4 w-100">Back to Home page</a>
       </div>
     </div>
   </aside>

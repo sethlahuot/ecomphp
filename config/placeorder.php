@@ -106,9 +106,15 @@ if (isset($_SESSION['auth'])) {
                 $stmt = $pdo->prepare($delete_cart_query);
                 $stmt->execute([':user_id' => $userId]);
 
-                $_SESSION['message'] = "Order placed successfully";
-                header('Location: ../my-orders.php');
-                exit();
+                if($payment_mode == "COD")
+                {
+                    $_SESSION['message'] = "Order placed successfully";
+                    header('Location: ../my-orders.php');
+                    exit();
+                }else{
+                    echo 201;
+                }
+                
 
             } catch (PDOException $e) {
                 echo "Database error: " . $e->getMessage();

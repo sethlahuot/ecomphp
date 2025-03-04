@@ -27,7 +27,14 @@ function redirect($url, $message)
     header("Location: $url");
     exit();
 }
-
+function getAllOrders()
+{
+    global $pdo;
+    $query = "SELECT * FROM orders WHERE status = :status ";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute(['status' => 0]);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
 
 

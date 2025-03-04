@@ -7,6 +7,7 @@
           <label class="form-label">Type here...</label>
           <input type="text" class="form-control">
         </div>
+        
       </div>
     </div>
   </div>

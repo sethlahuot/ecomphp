@@ -37,19 +37,19 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
                             <h4 class="text-light mb-3">Shop Info</h4>
-                            <a class="btn-link" href="">About Us</a>
-                            <a class="btn-link" href="">Contact Us</a>
-                            <a class="btn-link" href="">Privacy Policy</a>
+                            <a class="btn-link" href="about_us.php">About Us</a>
+                            <a class="btn-link" href="contact.php">Contact Us</a>
+                            <a class="btn-link" href="privacypolicy.php">Privacy Policy</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
                             <h4 class="text-light mb-3">Account</h4>
-                            <a class="btn-link" href="">My Account</a>
-                            <a class="btn-link" href="index.php?p=shop-detail">Shop details</a>
-                            <a class="btn-link" href="index.php?p=cart">Shopping Cart</a>
-                            <a class="btn-link" href="index.php?p=checkout">Order History</a>
-                            <a class="btn-link" href="index.php?p=shop">International Orders</a>
+                            <a class="btn-link" href="#">My Account</a>
+                            <a class="btn-link" href="shop.php">Shop details</a>
+                            <a class="btn-link" href="cart.php">Shopping Cart</a>
+                            <a class="btn-link" href="my-orders.php">Order History</a>
+                            <a class="btn-link" href="shop.php">International Orders</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">

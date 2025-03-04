@@ -55,7 +55,7 @@ if (isset($_GET['product'])) {
                                     </div>
                                 </div>
                                 <button class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary addToCarBtn" value="<?= htmlspecialchars($product['id']); ?>">
-                                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                    <i class="fa  fa-shopping-cart me-2 text-primary"></i> Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -82,8 +82,8 @@ if (isset($_GET['product'])) {
                                     </div>
                                 </div>
                                 <div class="card-footer bg-white border-0 text-center">
-                                    <a href="#" class="btn btn-outline-primary rounded-pill w-100">
-                                        <i class="fa fa-shopping-bag me-2"></i> Add to cart
+                                    <a href="products.php?product=<?= htmlspecialchars($items['slug']); ?>" class="btn btn-outline-primary rounded-pill w-100">
+                                    <i class="fa fa-shopping-bag me-2"></i>More Detail
                                     </a>
                                 </div>
                             </div>

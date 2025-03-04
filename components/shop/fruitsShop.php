@@ -84,26 +84,15 @@ include "config/userfunctions.php";
                                                 </div>
                                             </div>
                                             <div class="card-footer bg-white border-0 text-center">
-                                                <a href="#" class="btn btn-outline-primary rounded-pill w-100">
-                                                    <i class="fa fa-shopping-bag me-2"></i> Add to cart
+                                                <a href="products.php?product=<?= htmlspecialchars($item['slug']); ?>" class="btn btn-outline-primary rounded-pill w-100">
+                                                    <i class="fa fa-shopping-bag me-2"></i>More Detail
                                                 </a>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             <?php } ?>
-                            <div class="col-12">
-                                <div class="pagination d-flex justify-content-center mt-5">
-                                    <a href="#" class="rounded">&laquo;</a>
-                                    <a href="#" class="active rounded">1</a>
-                                    <a href="#" class="rounded">2</a>
-                                    <a href="#" class="rounded">3</a>
-                                    <a href="#" class="rounded">4</a>
-                                    <a href="#" class="rounded">5</a>
-                                    <a href="#" class="rounded">6</a>
-                                    <a href="#" class="rounded">&raquo;</a>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                         </div>
