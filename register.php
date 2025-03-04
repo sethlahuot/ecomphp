@@ -48,7 +48,8 @@
 
         <!-- Toggle Box -->
         <div class="toggle-box">
-            <div class="toggle-panel toggle-left">
+            <div  class="toggle-panel toggle-left">
+              <img src="img/logo.png" alt="">
                 <h1>Hello, Welcome!</h1>
                 <p>Don't have an account?</p>
                 <?php if(isset($_SESSION['message'])): ?>

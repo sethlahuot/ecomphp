@@ -127,6 +127,10 @@
     height: 100px;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
+.navbar-brand img {
+        width: 50px;
+}
+
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active,
@@ -177,12 +181,40 @@
 /*** Navbar End ***/
 
 /*** Hero Header ***/
+/* .hero-header {
+    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)),url(../img/background1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+
 .hero-header {
-    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(../img/hero-img.jpg);
+    position: relative; /* Make sure the element is positioned */
+    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1));
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.hero-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/background1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2; /* Set the opacity of the background image */
+    z-index: -1; /* Make sure the image stays behind the content */
+}
+
+
+
 
 .carousel-item {
     position: relative;
@@ -588,4 +620,3 @@
 .site-btn:hover {
     background: #e04b4f;
 }
-

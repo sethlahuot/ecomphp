@@ -1,5 +1,6 @@
 <?php
-include "../connect.php"; 
+include "C:/xampp/htdocs/project1/config/connect.php";
+
 include "myfunctions.php";
 session_start(); 
 if (isset($_POST['register_btn'])) 

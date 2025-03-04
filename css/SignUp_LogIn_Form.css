@@ -68,7 +68,7 @@ form{ width: 100%; }
     .input-box input{
         width: 100%;
         padding: 13px 50px 13px 20px;
-        background: #eee;
+        background: #fef9e7;
         border-radius: 8px;
         border: none;
         outline: none;
@@ -99,7 +99,7 @@ form{ width: 100%; }
 .btn{
     width: 100%;
     height: 48px;
-    background: #7494ec;
+    background: #FFC300;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     border: none;
@@ -124,68 +124,75 @@ form{ width: 100%; }
         margin: 0 8px;
     }
 
-.toggle-box{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-    .toggle-box::before{
-        content: '';
+    .toggle-box{
         position: absolute;
-        left: -250%;
-        width: 300%;
+        width: 100%;
         height: 100%;
-        background: #7494ec;
-        /* border: 2px solid red; */
-        border-radius: 150px;
+        
+    }
+        .toggle-box::before{
+            content: '';
+            position: absolute;
+            left: -250%;
+            width: 300%;
+            height: 100%;
+            background: #FFC300;
+            /* border: 2px solid red; */
+            border-radius: 150px;
+            z-index: 2;
+            transition: 1.8s ease-in-out;
+        }
+    
+            .container.active .toggle-box::before{ left: 50%; }
+    
+    .toggle-panel{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        /* background: seagreen; */
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         z-index: 2;
-        transition: 1.8s ease-in-out;
+        transition: .6s ease-in-out;
     }
-
-        .container.active .toggle-box::before{ left: 50%; }
-
-.toggle-panel{
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    /* background: seagreen; */
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    transition: .6s ease-in-out;
-}
-
-    .toggle-panel.toggle-left{ 
-        left: 0;
-        transition-delay: 1.2s; 
-    }
-        .container.active .toggle-panel.toggle-left{
-            left: -50%;
+    
+        .toggle-panel.toggle-left{ 
+            left: 0;
+            transition-delay: 1.2s; 
+        }
+            .container.active .toggle-panel.toggle-left{
+                left: -50%;
+                transition-delay: .6s;
+            }
+    
+        .toggle-panel.toggle-right{ 
+            right: -50%;
             transition-delay: .6s;
         }
-
-    .toggle-panel.toggle-right{ 
-        right: -50%;
-        transition-delay: .6s;
-    }
-        .container.active .toggle-panel.toggle-right{
-            right: 0;
-            transition-delay: 1.2s;
+            .container.active .toggle-panel.toggle-right{
+                right: 0;
+                transition-delay: 1.2s;
+            }
+    
+        .toggle-panel p{ margin-bottom: 20px; }
+    
+        .toggle-panel .btn{
+            width: 160px;
+            height: 46px;
+            background: transparent;
+            border: 2px solid #fcf3cf;
+            box-shadow: none;
         }
 
-    .toggle-panel p{ margin-bottom: 20px; }
-
-    .toggle-panel .btn{
-        width: 160px;
-        height: 46px;
-        background: transparent;
-        border: 2px solid #fff;
-        box-shadow: none;
-    }
+/* Style for the image in the left toggle panel */
+.toggle-panel.toggle-left img {
+    width: 40%;           
+    height: 40%;         
+    object-fit: contain; 
+}
 
 @media screen and (max-width: 650px){
     .container{ height: calc(100vh - 40px); }

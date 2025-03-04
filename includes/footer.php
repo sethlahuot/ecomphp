@@ -5,8 +5,9 @@
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="#">
-                                <h1 class="text-primary mb-0">Fruitables</h1>
-                                <p class="text-secondary mb-0">Fresh products</p>
+                            <img src="img/logo.png" alt="Logo" style="width: 100px;">
+                                <!-- <h1 class="text-primary mb-0">Fruitables</h1>
+                                <p class="text-secondary mb-0">Fresh products</p> -->
                             </a>
                         </div>
                         <div class="col-lg-6">
@@ -29,8 +30,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Why People Like us!</h4>
-                            <p class="mb-4">typesetting, remaining essentially unchanged. It was 
-                                popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                            <p class="mb-4">100% Organic & Fresh, Sustainably Grown, Locally Sourced, Delivered to You.</p>
                             <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
                         </div>
                     </div>
@@ -45,10 +45,10 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
                             <h4 class="text-light mb-3">Account</h4>
-                            <a class="btn-link" href="#">My Account</a>
-                            <a class="btn-link" href="shop.php">Shop details</a>
+                            <a class="btn-link" href="">My Account</a>
+                            <a class="btn-link" href="shop-detail.php">Shop details</a>
                             <a class="btn-link" href="cart.php">Shopping Cart</a>
-                            <a class="btn-link" href="my-orders.php">Order History</a>
+                            <a class="btn-link" href="checkout.php">Order History</a>
                             <a class="btn-link" href="shop.php">International Orders</a>
                         </div>
                     </div>
