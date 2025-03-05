@@ -78,7 +78,7 @@ include "config/userfunctions.php";
                                             <img src="uploads/<?= htmlspecialchars($item['image']); ?>" class="card-img-top img-fluid" alt="Product Image" style="height: 200px; object-fit: cover;">
                                             <div class="card-body d-flex flex-column justify-content-between">
                                                 <h5 class="card-title text-center"><?= htmlspecialchars($item['name']); ?></h5>
-                                                <p class="card-text text-muted text-center"><?= htmlspecialchars($item['description']); ?></p>
+                                                
                                                 <div class="text-center">
                                                     <span class="fs-5 fw-bold text-dark">$<?= htmlspecialchars($item['selling_price']); ?></span>
                                                 </div>

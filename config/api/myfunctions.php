@@ -1,6 +1,6 @@
 <?php
 
-include "C:/xampp/htdocs/project1/config/connect.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/project1/config/connect.php";
 
 function getAll($table)
 {
