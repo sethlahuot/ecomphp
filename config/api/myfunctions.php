@@ -1,6 +1,6 @@
 <?php
 
-include $_SERVER['DOCUMENT_ROOT'] . "/project1/config/connect.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/ecomphp/config/connect.php";
 
 function getAll($table)
 {
@@ -30,7 +30,7 @@ function redirect($url, $message)
 function getAllOrders()
 {
     global $pdo;
-    $query = "SELECT * FROM orders WHERE status = :status ";
+    $query = "SELECT * FROM orders WHERE status = :status ORDER BY id DESC";
     $stmt = $pdo->prepare($query);
     $stmt->execute(['status' => 0]);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);

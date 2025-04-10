@@ -58,6 +58,7 @@ include "config/placeorder.php";
                                     <th scope="col">Name</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Quantity</th>
+                                    <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
                             <?php 
@@ -86,7 +87,8 @@ include "config/placeorder.php";
                                     </th>
                                     <td class="py-5"><?= htmlspecialchars($citem['name']); ?></td>
                                     <td class="py-5"><?= htmlspecialchars($citem['selling_price']); ?>$</td>
-                                    <td class="py-5"><?= htmlspecialchars($citem['prod_qty']);?></td>
+                                    <td class="py-5">X<?= htmlspecialchars($citem['prod_qty']);?></td>
+                                    <td class="py-5"><?= htmlspecialchars($citem['selling_price'] * $citem['prod_qty']); ?>$</td>
                                         </tr>
                                     <tr>
                                     <?php 

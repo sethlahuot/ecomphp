@@ -10,6 +10,7 @@ include "../middleware/adminMiddleware.php";
             <div class="card">
                 <div class="card-header">
                     <h4>Products</h4>
+                    <a href="add-product.php" class="btn btn-primary float-end">Create</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-striped">

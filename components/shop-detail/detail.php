@@ -76,7 +76,7 @@ if (isset($_GET['product'])) {
                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;"><?= htmlspecialchars($items['meta_keywords']); ?></div>
                                 <div class="p-4 pb-0 rounded-bottom text-center">
                                     <h4><?= htmlspecialchars($items['name']); ?></h4>
-                                    <p><?= htmlspecialchars($items['description']); ?></p>
+                                    <!-- <p><?= htmlspecialchars($items['description']); ?></p> -->
                                     <div class="text-center">
                                         <p class="text-dark fs-5 fw-bold"><?= htmlspecialchars($items['selling_price']); ?>$</p>                                    
                                     </div>

@@ -22,7 +22,7 @@ include "config/userfunctions.php";
                             <?php foreach ($categories as $item) { ?>
                                 <div class="col-md-6 col-lg-4 col-xl-3"> 
                                     <div class="rounded position-relative fruite-item">
-                                        <a href="category.php?category=<?= htmlspecialchars($item['slug']); ?>">
+                                        <a href="shop.php?category=<?= htmlspecialchars($item['slug']); ?>">
                                             <img src="uploads/<?= htmlspecialchars($item['image']); ?>" alt="Category Image" class="w-100">
                                             <h4 class="text-center mt-2"><?= htmlspecialchars($item['name']); ?></h4>
                                         </a>

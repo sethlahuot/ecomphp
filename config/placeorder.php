@@ -12,7 +12,6 @@ if (isset($_SESSION['auth'])) {
                     echo "<h1>Please login first!</h1>";
                     exit();
                 }
-
                 $name = $_POST['name'] ?? '';
                 $email = $_POST['email'] ?? '';
                 $phone = $_POST['phone'] ?? '';

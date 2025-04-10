@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    console.log('Document ready - custom.js loaded');
+    
+    // Test if jQuery is working
+    console.log('jQuery version:', $.fn.jquery);
+    
+    // Test if SweetAlert2 is working
+    console.log('SweetAlert2 available:', typeof Swal !== 'undefined');
+    
     $('.delete_product_btn').click(function (e) {
         e.preventDefault();
         var id = $(this).val();
@@ -103,4 +111,5 @@ $(document).ready(function () {
             } 
           });
     });
+
 });

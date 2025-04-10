@@ -1,7 +1,6 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . "/project1/config/connect.php";
-
-include "myfunctions.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/ecomphp/config/connect.php";
+require_once "myfunctions.php";
 session_start(); 
 if (isset($_POST['register_btn'])) 
 {

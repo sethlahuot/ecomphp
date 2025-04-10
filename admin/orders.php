@@ -21,7 +21,7 @@ include "../middleware/adminMiddleware.php";
                                 <th>Tracking No</th>
                                 <th>Price</th>
                                 <th>Date</th>
-                                
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,6 +36,9 @@ include "../middleware/adminMiddleware.php";
                                     <td><?= htmlspecialchars($item['tracking_no']); ?></td>
                                     <td><?= htmlspecialchars($item['total_price']); ?> $</td>
                                     <td><?= htmlspecialchars($item['created_at']); ?></td>
+                                    <td>
+                                        <a href="view-order.php?id=<?= $item['id']; ?>" class="btn btn-primary btn-sm">View Details</a>
+                                    </td>
                                 </tr>
                                 <?php
                             }
@@ -43,7 +46,7 @@ include "../middleware/adminMiddleware.php";
                         else {
                             ?>
                             <tr>
-                                <td colspan="5">No orders yet</td>
+                                <td colspan="6">No orders yet</td>
                             </tr>
                             <?php
                         }

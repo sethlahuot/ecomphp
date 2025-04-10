@@ -26,7 +26,6 @@ if (isset($_POST['scope'])) {
                 echo 500;
                 exit();
             }
-
             try {
                 $insert_query = "INSERT INTO carts (user_id, prod_id, prod_qty) VALUES (:user_id, :prod_id, :prod_qty)";
                 $stmt = $pdo->prepare($insert_query);
@@ -35,7 +34,6 @@ if (isset($_POST['scope'])) {
                     ':prod_id' => $prod_id,
                     ':prod_qty' => $prod_qty
                 ]);
-
                 if ($success) {
                     echo 201;
                 } else {
@@ -44,17 +42,15 @@ if (isset($_POST['scope'])) {
             } catch (PDOException $e) {
                 echo "Database error: " . $e->getMessage();
             }
-        break;
+            break;
         case "update":
             if (!isset($_SESSION['auth_user']['user_id'])) {
                 echo "User not logged in!";
                 exit();
             }
-        
             $prod_id = $_POST['prod_id'];
             $prod_qty = $_POST['prod_qty'];
             $user_id = $_SESSION['auth_user']['user_id'];
-        
             try {
                 // Check if the product exists in the cart
                 $chk_existing_cart = "SELECT * FROM carts WHERE prod_id = :prod_id AND user_id = :user_id";
@@ -117,8 +113,6 @@ if (isset($_POST['scope'])) {
             } catch (PDOException $e) {
                 echo "Database error: " . $e->getMessage();
             }
-
-
         break;
     }
 }

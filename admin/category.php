@@ -9,6 +9,7 @@ include "../middleware/adminMiddleware.php";
             <div class="card">
                 <div class="card-header">
                     <h4>Category</h4>
+                    <a href="add-category.php" class="btn btn-primary float-end">Create</a>
                 </div>
                 <table class="table table-bordered table-striped">
                     <thead>

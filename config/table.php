@@ -20,7 +20,7 @@
                         meta_keywords MEDIUMTEXT,
                         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                         )";
-        $pdo->query($sqlCategory);
+                        $pdo->query($sqlCategory);
 
         $sqlProduct = "CREATE TABLE IF NOT EXISTS product(
                         id INT AUTO_INCREMENT PRIMARY KEY,

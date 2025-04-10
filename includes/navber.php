@@ -1,6 +1,6 @@
-
 <?php 
-include "config/api/authcode.php" ;
+require_once "config/api/authcode.php";
+require_once "config/userfunctions.php";
  
 $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1) ;
 
@@ -26,10 +26,16 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1) 
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 rounded-3">
                             <li>
+                                <a href="MyAccount.php" class="dropdown-item py-2">
+                                    <i class="fas fa-user-circle me-2"></i> My Account
+                                </a>
+                            </li>
+                            <li>
                                 <a href="cart.php" class="dropdown-item py-2">
                                     <i class="fas fa-shopping-cart me-2"></i> Cart
                                 </a>
                             </li>
+                            
                             <li>
                                 <a href="checkout.php" class="dropdown-item py-2">
                                     <i class="fas fa-credit-card me-2"></i> Checkout
@@ -77,9 +83,21 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1) 
                         <div class="d-flex m-3 me-0">
                             <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
                             
-                            <a href="checkout.php" class="position-relative me-4 my-auto">
+                            <a href="cart.php" class="position-relative me-4 my-auto">
                                 <i class="fa fa-shopping-bag fa-2x"></i>
-                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" ></span>
+                                <?php 
+                                if(isset($_SESSION['auth'])) {
+                                    $items = getCartItems();
+                                    $count = $items ? count($items) : 0;
+                                    if($count > 0) {
+                                ?>
+                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; right: -5px; min-width: 20px; min-height: 20px;">
+                                    <?php echo $count; ?>
+                                </span>
+                                <?php 
+                                    }
+                                }
+                                ?>
                             </a>
                         </div>
                     </div>

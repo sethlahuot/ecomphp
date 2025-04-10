@@ -89,7 +89,9 @@ include "config/userfunctions.php";
                     </table>
                 </div>
                 <div class="row g-4 justify-content-end">
-                    <div class="col-8"></div>
+                    <div class="col-8">
+                        <a href="shop.php" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase">Continue Shopping</a>
+                    </div>
                     <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
                         <div class="bg-light rounded">
                             <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
