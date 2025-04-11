@@ -14,6 +14,7 @@ if(isset($_GET['id'])) {
     } else {
         redirect("users.php", "User not found");
     }
+    
 } else {
     redirect("users.php", "User ID not provided");
 }

@@ -86,6 +86,26 @@
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )";
                 $pdo->query($sqlorderitems);
+        $sqlsettings = "CREATE TABLE IF NOT EXISTS settings(
+                        id INT AUTO_INCREMENT PRIMARY KEY,
+                        image VARCHAR(255) NOT NULL,
+                        title VARCHAR(255)  NOT NULL,
+                        slug VARCHAR(255) NOT NULL,
+                        meta_description TEXT,
+                        small_description TEXT,
+                        about_description1 TEXT,
+                        about_description2 TEXT,
+                        about_description3 TEXT,
+                        about_description4 TEXT,
+                        email1 VARCHAR(255) NOT NULL,
+                        email2 VARCHAR(255) NOT NULL,
+                        phone1 VARCHAR(50) NOT NULL,
+                        phone2 VARCHAR(50) NOT NULL,
+                        address TEXT NOT NULL,
+                        contact_description TEXT NOT NULL,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                        )";
+                $pdo->query($sqlsettings);
         echo "Table created successfully.";
     }catch(Exception $e){
         die("Connection failed: ". $e->getMessage());

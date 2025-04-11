@@ -1,4 +1,11 @@
 <!-- Contact Start -->
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . "/ecomphp/config/connect.php";
+$settings_query = "SELECT * FROM settings LIMIT 1";
+$stmt = $pdo->prepare($settings_query);
+$stmt->execute();
+$settings = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
 <div class="container-fluid contact py-5">
             <div class="container py-5">
                 <div class="p-5 bg-light rounded">
@@ -6,7 +13,7 @@
                         <div class="col-12">
                             <div class="text-center mx-auto" style="max-width: 700px;">
                                 <h1 class="text-primary">Get in touch</h1>
-                                <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done.</p>
+                                <p class="mb-4"><?= htmlspecialchars($settings['contact_description']) ?></p>
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -29,21 +36,27 @@
                                 <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
                                 <div>
                                     <h4>Address</h4>
-                                    <p class="mb-2">Phnom Penh</p>
+                                    <p class="mb-2"><?= htmlspecialchars($settings['address'] ?? 'Phnom Penh') ?></p>
                                 </div>
                             </div>
                             <div class="d-flex p-4 rounded mb-4 bg-white">
                                 <i class="fas fa-envelope fa-2x text-primary me-4"></i>
                                 <div>
                                     <h4>Mail Us</h4>
-                                    <p class="mb-2">houthengsela@gmail.com</p>
+                                    <p class="mb-2"><?= htmlspecialchars($settings['email1'] ?? 'houthengsela@gmail.com') ?></p>
+                                    <?php if(!empty($settings['email2'])): ?>
+                                    <p class="mb-2"><?= htmlspecialchars($settings['email2']) ?></p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="d-flex p-4 rounded bg-white">
                                 <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
                                 <div>
                                     <h4>Telephone</h4>
-                                    <p class="mb-2">(+855) 963622336</p>
+                                    <p class="mb-2"><?= htmlspecialchars($settings['phone1'] ?? '(+855) 963622336') ?></p>
+                                    <?php if(!empty($settings['phone2'])): ?>
+                                    <p class="mb-2"><?= htmlspecialchars($settings['phone2']) ?></p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

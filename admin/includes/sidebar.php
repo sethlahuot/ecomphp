@@ -24,7 +24,7 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1) 
         <li class="nav-item">
           <a class="nav-link text-white <?= $page =="category.php"? 'active bg-gradient-primary': ''; ?>" href="category.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
+              <i class="material-icons opacity-10">category</i>
             </div>
             <span class="nav-link-text ms-1">All Category</span>
           </a>
@@ -32,7 +32,7 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1) 
         <li class="nav-item">
           <a class="nav-link text-white <?= $page =="products.php"? 'active bg-gradient-primary': ''; ?>" href="products.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
+              <i class="material-icons opacity-10">inventory</i>
             </div>
             <span class="nav-link-text ms-1">All Products</span>
           </a>
@@ -40,7 +40,7 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1) 
         <li class="nav-item">
           <a class="nav-link text-white <?= $page =="orders.php"? 'active bg-gradient-primary': ''; ?>" href="orders.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
+              <i class="material-icons opacity-10">shopping_cart</i>
             </div>
             <span class="nav-link-text ms-1">Orders</span>
           </a>
@@ -48,9 +48,17 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1) 
         <li class="nav-item">
           <a class="nav-link text-white <?= $page =="users.php"? 'active bg-gradient-primary': ''; ?>" href="users.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
+              <i class="material-icons opacity-10">people</i>
             </div>
             <span class="nav-link-text ms-1">Users</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white <?= $page =="settings.php"? 'active bg-gradient-primary': ''; ?>" href="settings.php">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">settings</i>
+            </div>
+            <span class="nav-link-text ms-1">Settings</span>
           </a>
         </li>
       </ul>

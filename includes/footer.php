@@ -1,13 +1,18 @@
         <!-- Footer Start -->
+        <?php
+        include $_SERVER['DOCUMENT_ROOT'] . "/ecomphp/config/connect.php";
+        $settings_query = "SELECT * FROM settings LIMIT 1";
+        $stmt = $pdo->prepare($settings_query);
+        $stmt->execute();
+        $settings = $stmt->fetch(PDO::FETCH_ASSOC);
+        ?>
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
             <div class="container py-5">
                 <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="#">
-                            <img src="img/logo.png" alt="Logo" style="width: 100px;">
-                                <!-- <h1 class="text-primary mb-0">Fruitables</h1>
-                                <p class="text-secondary mb-0">Fresh products</p> -->
+                            <img src="uploads/<?= htmlspecialchars($settings['image']); ?>" alt="Logo" style="width: 100px;">
                             </a>
                         </div>
                         <div class="col-lg-6">
@@ -30,7 +35,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Why People Like us!</h4>
-                            <p class="mb-4">100% Organic & Fresh, Sustainably Grown, Locally Sourced, Delivered to You.</p>
+                            <p class="mb-4"><?= htmlspecialchars($settings['small_description']) ?></p>
                             <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
                         </div>
                     </div>
